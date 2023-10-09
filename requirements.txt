@@ -1,6 +1,6 @@
 streamlit
 tensorflow
-PIL
+Pillow
 numpy
 cv2
 wikipedia
