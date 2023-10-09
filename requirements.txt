@@ -1,0 +1,8 @@
+streamlit
+tensorflow
+Image
+ImageOps
+numpy
+cv2
+wikipedia
+base64
