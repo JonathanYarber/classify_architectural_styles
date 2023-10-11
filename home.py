@@ -181,10 +181,13 @@ def classify_architectural_styles():
         st.subheader("A brief summary from Wikipedia about this architectural style:")
         original_label = f'{list(label_dict.keys())[list(label_dict.values()).index(label)]}'
         search_query = original_label + (" architecture")
-        wiki_result = wikipedia.search(search_query)
-        page = wikipedia.page(wiki_result[0])
-        summary = page.summary
-        st.write(summary)
+        try:
+            wiki_result = wikipedia.search(search_query)
+            page = wikipedia.page(wiki_result[0])
+            summary = page.summary
+            st.write(summary)
+        except: 
+            st.write("Wikipedia summary cannot be generated for this architectural style.")
 
 # ============================================================================
 # GENERAL PROJECTS WEBPAGE SETUP
